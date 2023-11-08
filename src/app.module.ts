@@ -11,7 +11,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       envFilePath: '.env',
       isGlobal: true, 
     }),
-    MongooseModule.forRoot('mongodb+srv://bekajorjikia:zuva2224@cluster0.q6tmfiw.mongodb.net/?retryWrites=true&w=majority'),
+    MongooseModule.forRoot(process.env.DB_URI),
     TodoModule],
   controllers: [AppController],
   providers: [AppService],
