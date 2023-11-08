@@ -1,8 +1,8 @@
-GET http://localhost:3000/todo/ HTTP/1.1
+PUT http://localhost:3000/todo/654bf87ce36e75b6633b8cd7 HTTP/1.1
 content-type: application/json
 
 {
-    "title": "sample",
+    "title": "Updated.",
     "description": "Wed, 21 Oct 2015 18:27:50 GMT",
     "done": false
 }

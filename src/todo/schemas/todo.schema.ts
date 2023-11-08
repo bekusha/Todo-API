@@ -11,7 +11,7 @@ export class Todo{
     @Prop()
     description: string;
     @Prop()
-    done: false;
+    done: boolean;
 }
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);
