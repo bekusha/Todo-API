@@ -6,6 +6,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 })
 
 export class Todo{
+    
     @Prop()
     title: string;
     @Prop()

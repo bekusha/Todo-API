@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose'
 import { Todo } from './schemas/todo.schema';
+import { UpdateTodoDto } from './dto/update-todo.dto';
 
 @Injectable()
 export class TodoService {
@@ -30,11 +31,13 @@ export class TodoService {
         return res;
     }
 
-    async updateById(id: string, todo: Todo ): Promise <Todo>{
+    async updateById(id: string, todo: UpdateTodoDto ): Promise <Todo>{
         return await this.todoModel.findByIdAndUpdate(id, todo, {
             new:true,
             runValidators:true,
         })
     }
+
+    
 
 }

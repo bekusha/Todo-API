@@ -1,8 +1,8 @@
-PUT http://localhost:3000/todos/654c89103db2bfdaa5a69e4e HTTP/1.1
+DELETE http://localhost:3000/todos/654bf87ce36e75b6633b8cd7 HTTP/1.1
 content-type: application/json
 
 {
-    "title": "New Todo232.",
-    "description": "Description.",
+    "title": "New Andro.",
+    "description": "Our Fucking Description.",
     "done": false
 }

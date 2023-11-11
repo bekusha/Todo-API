@@ -1,10 +1,10 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { TodoService } from './todo.service';
 import { Todo } from './schemas/todo.schema';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 
-@Controller('/todo')
+@Controller('/todos')
 export class TodoController {
     constructor(private todoService: TodoService){}
 
@@ -30,7 +30,7 @@ export class TodoController {
     }
 
 
-    @Post(':id')
+    @Delete(':id')
     async deleteTodo(
         @Param('id')
         id:string
@@ -47,4 +47,5 @@ export class TodoController {
     ): Promise<Todo>{
         return this.todoService.updateById(id, todo)
     }
+
 }
