@@ -4,7 +4,7 @@ import { Todo } from './schemas/todo.schema';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 
-@Controller('/todos')
+@Controller('todos/')
 export class TodoController {
     constructor(private todoService: TodoService){}
 
@@ -13,7 +13,7 @@ export class TodoController {
         return this.todoService.findAll()
     }
 
-    @Post('/new')
+    @Post('new')
     async createTodo(
         @Body()
         todo:CreateTodoDto
@@ -21,7 +21,7 @@ export class TodoController {
         return this.todoService.create(todo)
     }
 
-    @Get('/:id')
+    @Get(':id')
     async getTodo(
         @Param('id')
         id:string
@@ -30,7 +30,7 @@ export class TodoController {
     }
 
 
-    @Delete('/:id')
+    @Delete(':id')
     async deleteTodo(
         @Param('id')
         id:string
@@ -38,7 +38,7 @@ export class TodoController {
         await this.todoService.deleteById(id);
     }
 
-    @Put('/:id')
+    @Put(':id')
     async updateTodo(@Param('id')
     id:string,
     @Body()
