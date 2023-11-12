@@ -34,8 +34,8 @@ export class TodoController {
     async deleteTodo(
         @Param('id')
         id:string
-    ): Promise <Todo>{
-        return this.todoService.deleteById(id)
+    ): Promise<void>{
+        await this.todoService.deleteById(id);
     }
 
     @Put(':id')
