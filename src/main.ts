@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const corsOptions: CorsOptions = {
-    origin: 'https://funny-fox-23d964.netlify.app/', 
+    origin: 'https://funny-fox-23d964.netlify.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: false,
   };
