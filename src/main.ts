@@ -8,13 +8,14 @@ async function bootstrap() {
   const corsOptions: CorsOptions = {
     origin: 'https://65512abaef6b6b3536f301b4--spectacular-tiramisu-b201c8.netlify.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: false,
+    credentials: true,
   };
 
   app.enableCors(corsOptions);
 
   
-  const port = process.env.PORT;
+  // const port = process.env.PORT;
+  const port = 3000;
 
   await app.listen(port);
 }
